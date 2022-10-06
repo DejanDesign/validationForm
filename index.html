@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>validation form JS</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    body {
+      box-sizing: border-box;
+      font-family: sans-serif;
+
+    }
+
+    #login-container {
+      width: 460px;
+      margin: 0 auto;
+    }
+
+    form label,
+    form input {
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    form input {
+      padding: 8px;
+    }
+
+    form label {
+      font-weight: bold;
+    }
+
+    form div {
+      margin: 16px 0px;
+    }
+
+    #error {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .checkFirst {
+      top: -27px;
+      position: relative;
+      float: right;
+      right: 10px;
+      font-size: 1.2rem;
+      color: green;
+      display: none;
+    }
+
+    .checkSecond {
+      top: -27px;
+      position: relative;
+      float: right;
+      right: 10px;
+      font-size: 1.2rem;
+      color: green;
+      display: none;
+    }
+
+    .errFirst {
+      top: -27px;
+      position: relative;
+      float: right;
+      right: 10px;
+      font-size: 1.2rem;
+      display: none;
+    }
+
+    .errSecond {
+      top: -27px;
+      position: relative;
+      float: right;
+      right: 10px;
+      font-size: 1.2rem;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="login-container">
+    <form id="form" action="/" method="GET">
+      <div>
+        <label for="username">Username:</label>
+        <input style="z-index: 99" id="username" type="text" name="email" placeholder="Enter your user name..." />
+        <i class="fa-solid fa-check checkFirst"></i>
+        <i class="fa-solid fa-x errFirst"></i>
+      </div>
+
+      <div>
+        <label for="password">Password:</label>
+        <input id="password" type="password" name="password" placeholder="Enter your password..." />
+        <i class="fa-solid fa-check checkSecond"></i>
+        <i class="fa-solid fa-x errSecond"></i>
+      </div>
+
+      <input type="submit" value="Login" />
+    </form>
+  </div>
+  <div id="error"></div>
+
+  <script src="./app.js"></script>
+</body>
+
+</html>
